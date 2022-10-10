@@ -1,0 +1,118 @@
+
+html {
+    background-color: #f8f8cd;
+}
+
+header {
+    background-color: #F9F06C;
+    width: 100%;
+}
+
+.navigation {
+    background-color: #F9F06C;
+    padding: 10px;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+a {
+    color: whitesmoke;
+}
+
+
+li {
+    background-color: #c43424;
+    font-size: larger;
+    font-family: 'Gill Sans', sans-serif;
+    display: inline-block;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.current-page a {
+    color: #c43424;
+}
+
+.current-page {
+    background-color: whitesmoke;
+    border: 1px solid #c43424;
+}
+
+img {
+    border: 5px solid #849c54;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2px;
+}
+
+img:hover {
+    background-color: #849c54;
+}
+
+.gallery-grid {
+    display: grid;
+	background-color: #f8f8cd;
+	padding: 10px;
+	width: 90%;
+	height: 90%;
+	text-align: center;
+	font-size: 30px;
+	margin: 0 auto;
+    grid-template-columns: 1fr;
+	grid-template-rows: repeat(9, 1fr);
+    border-bottom: 5px solid #c43424;
+    border-top: 5px solid #c43424;
+}
+
+.gallery-grid > div {
+    padding: 1px;
+}
+
+h1 {
+    text-align: center;
+    color: #c43424;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: medium;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+figcaption {
+    font-family: 'Gill Sans', sans-serif;
+    font-size: medium;
+    color: #c43424;
+}
+
+figure {
+    margin: 10px;
+}
+
+@media screen and (min-width: 776px) {
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    figcaption {
+        font-size:medium;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    figcaption {
+        font-size: large;
+    }
+}
