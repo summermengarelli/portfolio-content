@@ -70,7 +70,7 @@ li {
 .gal-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5% 94% 1%;
+    grid-template-rows: 4% 95.5% .5%;
 }
 
 .citation {
@@ -202,8 +202,6 @@ figure {
 .res-text {
     grid-row: 1 / span 1;
     width: 100%;
-    text-size-adjust: auto;
-    font-size: small;
 }
 
 .pom-resources {
@@ -255,7 +253,7 @@ figure {
 }
 
 .gallery-intro p {
-    font-size:x-small;
+    font-size: 1.5em;
 }
 
 @media (prefers-reduced-motion) {
