@@ -73,12 +73,52 @@ li {
     grid-row: 3 / span 1;
 }
 
-.check-img {
-    width: 30%;
+.check-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4% 92% 4%;
+    align-items: center;
 }
 
-.checklist-mark {
-    width: 10%;
+#check-header {
+    grid-row: 1 / span 1;
+}
+
+#check-main {
+    grid-row: 2 / span 1;
+    padding-top: 40px;
+}
+
+#check-foot {
+    grid-row: 3 / span 1;
+}
+
+.check-txt {
+    color: #c43424;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: medium;
+    text-align: center;
+}
+
+.check-head {
+    color: #c43424;
+    font-family: 'Gill Sans', sans-serif;
+    text-align: center;
+}
+
+.check-img {
+    max-width: 70vw;
+    max-height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mockup {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body {
@@ -88,11 +128,6 @@ body {
 
 main {
     padding-bottom: 5rem;
-}
-
-.pom-aside {
-    border: 2px solid pink;
-    padding: 3px;
 }
 
 footer {
@@ -145,6 +180,63 @@ h1 {
     padding-bottom: 25px;
 }
 
+.in-link {
+    color: #1C8269;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: medium; 
+}
+
+.timer {
+    max-width: 90vw;
+    max-height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.in-body {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4% 68% 24% 4%;
+}
+
+#in-citation {
+    font-size: xx-small;
+}
+
+#in-header {
+    grid-row: 1 / span 1;
+}
+
+#main-content {
+    padding-top: 40px;
+    grid-row: 2 / span 1;
+    padding-bottom: 25px;
+}
+
+.pom-aside {
+    grid-row: 3 / span 1;
+    text-align: center;
+    color: #c43424;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: x-small;
+    padding: 25px;
+    border: thick dotted #1C8269;
+    border-radius: 5px;
+}
+
+#in-footer {
+    grid-row: 4 / span 1;
+}
+
+p {
+    color: #c43424;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: medium;
+    text-align: center;
+}
+
 figcaption {
     font-family: 'Gill Sans', sans-serif;
     font-size: medium;
@@ -159,9 +251,15 @@ figure {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 4% 92% 4%;
+    align-items: center;
 }
 
-.res-header {
+#spotify {
+    width: 100%;
+    font-size: 1em;
+}
+
+#res-header {
     grid-row: 1 / span 1;
 }
 
@@ -174,6 +272,7 @@ figure {
     align-items: center;
     row-gap: 10px;*/
     grid-row: 2 / span 1;
+    padding-top: 40px;
 }
 
 .res-footer {
@@ -185,7 +284,6 @@ figure {
     padding: 20px;
     padding-bottom: 45px;
     max-width: 25vh;
-    max-width: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;

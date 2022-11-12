@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TB5LRJLL5Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TB5LRJLL5Z');
+</script>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <script src="https://kit.fontawesome.com/5896bfac68.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,8 +21,8 @@
         <link rel="icon" type="image/x-icon" href="./images/favicon.png">
     </head>
 
-    <body>
-        <header id="header">
+    <body class="in-body">
+        <header id="in-header">
             <a class="skip" href="#main-content"></a>
             <nav class="navigation">
                 <p class="site-title">PRETTY POMODORO TIMER</p>
@@ -29,31 +39,31 @@
             Welcome to Pretty Pomodoro!
 
             This site is designed to provide you a one-stop shop for balancing productivity and wellbeing.
-            In the other pages of this site, you will find a place to create a checklist [hyperlinked to page]
-            and cross off items as you complete them; a collection of poems and exercises [hyperlinked to page]
-            to find peace, inspiration, and entertainment during your breaks; and a guide [hyperlinked to page] 
-            to productivity and mental health resources. This front page is dedicated to a timer, which you can 
+            In the other pages of this site, you will find a place to create a <a class="in-link" href="./checklist.html">checklist</a>
+            and cross off items as you complete them; a <a class="in-link" href="./gallery.html">gallery</a> for relaxation during your breaks; 
+            and a <a class="in-link" href="./resources.html">guide</a> guide to productivity and mental health resources. This front page is dedicated to a timer, which you can 
             use to implement the Pomodoro Method in your studies or work.
-
-            <aside class="pom-aside">
-
-            Invented by Francesco Cirillo in the 1980s, the Pomodoro Technique is designed to help those of us who 
-            struggle with time management and anxiety surrounding our ever-present to-do lists to focus, get into flow state, 
-            attend to our projects and obligations, and “change the relationship with time and reach our goals with less effort 
-            and anxiety” (“The Pomodoro Technique,” cited below). Pomodoro means “tomato” in Italian, and the method is so 
-            named because Cirillo used a tomato-shaped kitchen timer when he invented the technique. 
-            </aside>
-            Here is how the Pomodoro works:
+        </h1>
+        <img class="timer" src="./images/timer.png" alt="a mockup of the timer that will eventually be on this page">
+        <p>
+            Here's how the Pomodoro works: <br>
 
             Set a timer for 25 minutes. During this time, work on the task at hand, and ONLY the task at hand. 
             When the timer goes off, set another timer for 5 minutes. Take this as a short break.
             After your break, restart the 25-minute timer and refocus.
             Every 4 “Pomodoros,” or rounds, take a longer break.
 
-            Source: “The Pomodoro Technique.” Francesco Cirillo. Cirillo Consulting GMBH. https://francescocirillo.com/products/the-pomodoro-technique.
-        </h1>
+        </p>
     </main>
-    <footer id="footer">
+    <aside class="pom-aside">
+        Invented by Francesco Cirillo in the 1980s, the Pomodoro Technique is designed to help those of us who 
+        struggle with time management and anxiety surrounding our ever-present to-do lists to focus, get into flow state, 
+        attend to our projects and obligations, and “change the relationship with time and reach our goals with less effort 
+        and anxiety” (“The Pomodoro Technique,” cited below). Pomodoro means “tomato” in Italian, and the method is so 
+        named because Cirillo used a tomato-shaped kitchen timer when he invented the technique. 
+        <p id="in-citation"><br>Source: “The Pomodoro Technique.” Francesco Cirillo. Cirillo Consulting GMBH. https://francescocirillo.com/products/the-pomodoro-technique.</p>
+    </aside>
+    <footer id="in-footer">
         <h5 class="footer-text">Created by Summer Mengarelli, 2022.</h5>
     </footer>
     </body>
