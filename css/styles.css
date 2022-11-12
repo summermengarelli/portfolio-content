@@ -70,7 +70,7 @@ li {
 .gal-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 7% 92% 1%;
+    grid-template-rows: 5% 94% 1%;
 }
 
 .citation {
@@ -86,9 +86,15 @@ li {
 }
 
 body {
+    position: relative;
+    min-height: 100vh;
     display: grid;
-    align-content: center;
     justify-content: center;
+    align-items: center;
+}
+
+main {
+    padding-bottom: 5rem;
 }
 
 .pom-aside {
@@ -97,13 +103,15 @@ body {
 }
 
 footer {
-    max-height: 20vh;
+    height: 5rem;
     background-image: url('../images/footerimage.png');
     background-position: center center;
     background-repeat: repeat-x;
-    background-size: 15%;
+    background-size: 25%;
     text-align: center;
-
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer-text {
