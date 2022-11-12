@@ -9,8 +9,22 @@ header {
 }
 
 .navigation {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #F9F06C;
     padding: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.site-title {
+    color: #c43424;
+    font-family: 'Chango', sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+    text-transform: uppercase;
+    max-width: 100vw;
 }
 
 a:link { text-decoration: none; }
@@ -42,30 +56,77 @@ li {
     border: 1px solid #c43424;
 }
 
-img {
-    border: 5px solid #849c54;
+.gal-img {
+    border: 5px solid #1C8269;
     margin: 0 auto;
     width: 100%;
     padding: 2px;
 }
 
-img:hover {
-    background-color: #849c54;
+.gal-img:hover {
+    background-color: #1C8269;
+}
+
+.gal-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7% 92% 1%;
+}
+
+.citation {
+    grid-row: 3 / span 1;
+}
+
+.check-img {
+    width: 30%;
+}
+
+.checklist-mark {
+    width: 10%;
+}
+
+body {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.pom-aside {
+    border: 2px solid pink;
+    padding: 3px;
+}
+
+footer {
+    max-height: 20vh;
+    background-image: url('../images/footerimage.png');
+    background-position: center center;
+    background-repeat: repeat-x;
+    background-size: 15%;
+    text-align: center;
+
+}
+
+.footer-text {
+    color: whitesmoke;
+    font-family: 'Gill Sans', sans-serif;
+    display: inline-flex;
+    background-color: #c43424;
+    padding: 3px;
+    font-size:x-small;
 }
 
 .gallery-grid {
-    display: grid;
+    display: flex;
 	background-color: #f8f8cd;
 	padding: 10px;
 	width: 90%;
-	height: 90%;
+	height: 100%;
 	text-align: center;
 	font-size: 30px;
 	margin: 0 auto;
-    grid-template-columns: 1fr;
-	grid-template-rows: repeat(9, 1fr);
-    border-bottom: 5px solid #c43424;
-    border-top: 5px solid #c43424;
+    flex-direction: column;
+    flex-wrap: wrap;
+    grid-row: 2 / span 1;
 }
 
 .gallery-grid > div {
@@ -93,7 +154,109 @@ figure {
     margin: 10px;
 }
 
-@media screen and (min-width: 776px) {
+.res-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13% 20% 10% 30% 27%;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 10px;
+    padding-top: 10px;
+}
+
+.res-img {
+    width: 40%;
+    grid-row: 2 / span 1;
+    padding: 20px;
+    padding-bottom: 45px;
+}
+
+.res-img:hover {
+    animation: shake 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+.res-text {
+    grid-row: 1 / span 1;
+    width: 100%;
+    text-size-adjust: auto;
+    font-size: small;
+}
+
+.pom-resources {
+    grid-row: 3/span 1;
+    padding-top: 40px;
+    width: 100%;
+}
+
+.resources {
+    grid-row: 4/span 1;
+    width: 100%;
+}
+
+.video {
+    grid-row: 5 / span 1;
+    text-align: center;
+    align-items: center;
+}
+
+.video p {
+    color: #c43424;
+    font-family: 'Gill Sans', sans-serif;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.res-link {
+    font-family: 'Gill Sans', sans-serif;
+    color: #1C8269;
+    font-size: medium;
+}
+
+.resources, .pom-resources {
+    color: #c43424;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: medium;
+    text-align: center;
+}
+
+
+.gallery-intro {
+    display: inline-grid;
+    justify-content: center;
+	margin: 0 auto;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    grid-row: 1 / span 1;
+}
+
+.gallery-intro p {
+    font-size:x-small;
+}
+
+@media (prefers-reduced-motion) {
+    shake {
+        animation: none;
+    }
+}
+
+/*@media screen and (min-width: 776px) {
     .gallery-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -115,4 +278,4 @@ figure {
     figcaption {
         font-size: large;
     }
-}
+}*/
