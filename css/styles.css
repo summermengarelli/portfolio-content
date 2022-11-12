@@ -67,11 +67,7 @@ li {
     background-color: #1C8269;
 }
 
-.gal-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4% 95.5% .5%;
-}
+
 
 .citation {
     grid-row: 3 / span 1;
