@@ -5,26 +5,28 @@ html {
 
 header {
     background-color: #F9F06C;
-    width: 100%;
+    width: 100vw;
 }
 
 .navigation {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     background-color: #F9F06C;
-    padding: 10px;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100vw;
+    padding: 5px;
+    justify-content: center;
+    max-width: 100vw;
 }
 
 .site-title {
     color: #c43424;
     font-family: 'Chango', sans-serif;
-    font-size: x-large;
+    font-size: large;
     font-weight: bolder;
     text-transform: uppercase;
     max-width: 100vw;
+    margin-top: 8px;
+    margin-bottom: 4px;
 }
 
 a:link { text-decoration: none; }
@@ -36,16 +38,39 @@ a {
     color: whitesmoke;
 }
 
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 100vw;
+    gap: 5px;
+    justify-content: center;
+    justify-items: center;
+    padding-inline-start: 0%;
+    text-align: center;
+}
+
 
 li {
     background-color: #c43424;
-    font-size: larger;
-    font-family: 'Gill Sans', sans-serif;
+    font-size: small;
     display: inline-block;
+    font-family: 'Gill Sans', sans-serif;
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
+    width: 90%;
+    box-sizing: border-box;
+    position: relative;
 }
+
+li a {
+    margin: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
 
 .current-page a {
     color: #c43424;
@@ -75,7 +100,7 @@ li {
 .check-body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 4% 92% 4%;
+    grid-template-rows: 10% 86% 4%;
     align-items: center;
 }
 
@@ -123,14 +148,15 @@ li {
 body {
     position: relative;
     min-height: 100vh;
+    max-width: 100%;
 }
 
 main {
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
 }
 
 footer {
-    height: 5rem;
+    height: 1.5rem;
     background-image: url('../images/footerimage.png');
     background-position: center center;
     background-repeat: repeat-x;
@@ -147,7 +173,7 @@ footer {
     display: inline-flex;
     background-color: #c43424;
     padding: 3px;
-    font-size:x-small;
+    font-size:xx-small;
 }
 
 .gallery-grid {
@@ -172,8 +198,8 @@ h1 {
     text-align: center;
     color: #c43424;
     font-family: 'Gill Sans', sans-serif;
-    font-size: medium;
-    width: 85%;
+    font-size: small;
+    width: 90%;
     margin: 0 auto;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -182,7 +208,7 @@ h1 {
 .in-link {
     color: #1C8269;
     font-family: 'Gill Sans', sans-serif;
-    font-size: medium; 
+    font-size: small; 
 }
 
 .timer {
@@ -196,30 +222,42 @@ h1 {
     font-size: xx-small;
 }
 
-/*#in-header {
+.in-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 66% 20% 4%;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+}
+
+#in-header {
     grid-row: 1 / span 1;
-}*/
+}
 
 .main-content {
-   /* grid-row: 2 / span 1;*/
+    grid-row: 2 / span 1;
     align-self: center;
-    border: 3px solid green;
+    padding-bottom: 0px;
 }
 
 .pom-aside {
-    /*grid-row: 3 / span 1;*/
+    grid-row: 3 / span 1;
     text-align: center;
     color: #c43424;
     font-family: 'Gill Sans', sans-serif;
     font-size: x-small;
-    padding: 25px;
+    padding: 8px;
     border: thick dotted #1C8269;
     border-radius: 5px;
+    max-width: 85vw;
+    margin-bottom: 10px;
 }
 
-/*.in-footer {
+.in-footer {
     grid-row: 4 / span 1;
-}*/
+    margin-top: 4px;
+}
 
 p {
     color: #c43424;
@@ -241,17 +279,18 @@ figure {
 .res-body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 4% 92% 4%;
+    grid-template-rows: 8% 88% 4%;
     align-items: center;
 }
 
 #spotify {
-    width: 100%;
+    width: 100vw;
     font-size: 1em;
 }
 
 #res-header {
     grid-row: 1 / span 1;
+    width: 100vw;
 }
 
 .res-main {
@@ -264,10 +303,12 @@ figure {
     row-gap: 10px;*/
     grid-row: 2 / span 1;
     padding-top: 40px;
+    max-width: 100vw;
 }
 
 .res-footer {
     grid-row: 3 / span 1;
+    width: 100vw;
 }
 
 .res-img {
@@ -353,7 +394,7 @@ figure {
 }
 
 .gallery-intro p {
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 @media (prefers-reduced-motion) {
