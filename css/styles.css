@@ -15,7 +15,7 @@ header {
     padding: 10px;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
+    width: 100vw;
 }
 
 .site-title {
@@ -66,7 +66,6 @@ li {
 .gal-img:hover {
     background-color: #1C8269;
 }
-
 
 
 .citation {
@@ -188,35 +187,27 @@ h1 {
 
 .timer {
     max-width: 90vw;
-    max-height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.in-body {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4% 68% 24% 4%;
 }
 
 #in-citation {
     font-size: xx-small;
 }
 
-#in-header {
+/*#in-header {
     grid-row: 1 / span 1;
-}
+}*/
 
-#main-content {
-    padding-top: 40px;
-    grid-row: 2 / span 1;
-    padding-bottom: 25px;
+.main-content {
+   /* grid-row: 2 / span 1;*/
+    align-self: center;
+    border: 3px solid green;
 }
 
 .pom-aside {
-    grid-row: 3 / span 1;
+    /*grid-row: 3 / span 1;*/
     text-align: center;
     color: #c43424;
     font-family: 'Gill Sans', sans-serif;
@@ -226,9 +217,9 @@ h1 {
     border-radius: 5px;
 }
 
-#in-footer {
+/*.in-footer {
     grid-row: 4 / span 1;
-}
+}*/
 
 p {
     color: #c43424;
