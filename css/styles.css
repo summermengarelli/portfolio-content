@@ -63,6 +63,21 @@ li {
     box-sizing: border-box;
 }
 
+.screenreader-text {
+    position: absolute;
+    left: -999px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+  }
+  .screenreader-text:focus {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    position: static;
+    margin: auto;
+  }
+
 .current-page a {
     color: #c43424;
 }
@@ -123,7 +138,6 @@ li {
 
 .check-img {
     max-width: 70vw;
-    max-height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -197,7 +211,7 @@ h1 {
 }
 
 .in-link {
-    color: #1C8269;
+    color: #0947c8;
     font-family: 'Gill Sans', sans-serif;
     font-size: small; 
 }
@@ -362,7 +376,7 @@ figure {
 
 .res-link {
     font-family: 'Gill Sans', sans-serif;
-    color: #1C8269;
+    color: #0947c8;
     font-size: medium;
 }
 
@@ -382,11 +396,9 @@ figure {
     justify-self: center;
     width: 100%;
     grid-row: 1 / span 1;
-}
-
-.gallery-intro p {
     font-size: 1em;
 }
+
 
 @media (prefers-reduced-motion) {
     shake {
