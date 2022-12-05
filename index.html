@@ -2,14 +2,14 @@
 <html lang="en">
     <head>
         <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TB5LRJLL5Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TB5LRJLL5Z"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  gtag('config', 'G-TB5LRJLL5Z');
-</script>
+            gtag('config', 'G-TB5LRJLL5Z');
+        </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -18,7 +18,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
         <title>Pretty Pomodoro</title>
-        <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     </head>
 
     <body class="in-body">
@@ -36,7 +36,7 @@
             </nav>
         </header>
     <main class="main-content" id="main-content">
-        <h1>
+        <h1 id="main-intro">
             Welcome to Pretty Pomodoro!
 
             This site is designed to provide you a one-stop shop for balancing productivity and wellbeing.
@@ -45,8 +45,40 @@
             and a <a class="in-link" href="./resources.html">guide</a> to productivity and mental health resources. This front page is dedicated to a timer, which you can 
             use to implement the Pomodoro Method in your studies or work.
         </h1>
-        <img class="timer" src="./images/timer.png" alt="a mockup of the timer that will eventually be on this page">
-        <p>
+        <div id="timer-container">
+            <div class="button-group mode-buttons" id="js-mode-buttons">
+                <button
+                  data-mode="pomodoro"
+                  class="button active mode-button"
+                  id="js-pomodoro"
+                >
+                  POMODORO
+                </button>
+                <button
+                  data-mode="shortBreak"
+                  class="button mode-button"
+                  id="js-short-break"
+                >
+                  SHORT BREAK
+                </button>
+                <button
+                  data-mode="longBreak"
+                  class="button mode-button"
+                  id="js-long-break"
+                >
+                  LONG BREAK
+                </button>
+              </div>
+              <div class="clock" id="js-clock">
+                <span id="js-minutes">25</span>
+                <span class="separator">:</span>
+                <span id="js-seconds">00</span>
+              </div>
+              <button class="main-button" data-action="start" id="js-btn">
+                START
+              </button>
+        </div>
+        <p id="pom-works">
             Here's how the Pomodoro works: <br>
 
             Set a timer for 25 minutes. During this time, work on the task at hand, and ONLY the task at hand. 
@@ -55,15 +87,43 @@
             Every 4 “Pomodoros,” or rounds, take a longer break.
 
         </p>
+        <form id="form"
+            action="https://formspree.io/f/xoqbpydw"
+            method="POST">
+            <p id="form-q">Questions or ideas? Reach out to me!</p>
+            <div id="email">
+                <label>
+                    Your email:
+                    <input type="email" name="email">
+                </label>
+            </div>
+            <div id="message">
+                <label>
+                    Your message:
+                    <textarea name="message"></textarea>
+                </label>
+            </div>
+                <!-- your other form fields go here -->
+            <div id="submit">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+        <aside class="pom-aside">
+            Invented by Francesco Cirillo in the 1980s, the Pomodoro Technique is designed to help those of us who 
+            struggle with time management and anxiety surrounding our ever-present to-do lists to focus, get into flow state, 
+            attend to our projects and obligations, and “change the relationship with time and reach our goals with less effort 
+            and anxiety” (“The Pomodoro Technique,” cited below). Pomodoro means “tomato” in Italian, and the method is so 
+            named because Cirillo used a tomato-shaped kitchen timer when he invented the technique. 
+            <img class="as-img" src="./images/footerimage.png" alt="A tomato with a blueberry on either side." >
+            <p id="in-citation"><br>Source: “The Pomodoro Technique.” Francesco Cirillo. Cirillo Consulting GMBH. https://francescocirillo.com/products/the-pomodoro-technique.</p>
+        </aside>
+        <script src="./javascript/main.js"></script>
     </main>
-    <aside class="pom-aside">
-        Invented by Francesco Cirillo in the 1980s, the Pomodoro Technique is designed to help those of us who 
-        struggle with time management and anxiety surrounding our ever-present to-do lists to focus, get into flow state, 
-        attend to our projects and obligations, and “change the relationship with time and reach our goals with less effort 
-        and anxiety” (“The Pomodoro Technique,” cited below). Pomodoro means “tomato” in Italian, and the method is so 
-        named because Cirillo used a tomato-shaped kitchen timer when he invented the technique. 
-        <p id="in-citation"><br>Source: “The Pomodoro Technique.” Francesco Cirillo. Cirillo Consulting GMBH. https://francescocirillo.com/products/the-pomodoro-technique.</p>
-    </aside>
+    <div class="hidden">
+        <audio src="./audio/bird_songs.m4a" data-sound="pomodoro"></audio>
+        <audio src="./audio/bird_songs.m4a" data-sound="shortBreak"></audio>
+        <audio src="./audio/bird_songs.m4a" data-sound="longBreak"></audio>
+    </div>
     <footer class="in-footer">
         <p class="footer-text">Created by Summer Mengarelli, 2022.</p>
     </footer>

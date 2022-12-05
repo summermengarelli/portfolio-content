@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TB5LRJLL5Z"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-TB5LRJLL5Z');
+        </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -9,11 +18,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
         <title> Relaxation Gallery</title>
-        <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     </head>
 
-    <body>
-        <header>
+    <body id="gal-body" onload="playSound()">
+        <header id="gal-header">
+            <a id='skip-nav' class='screenreader-text' href='#main-content'>Skip to Content
+            </a>
             <nav class="navigation">
                 <p class="site-title">PRETTY POMODORO TIMER</p>
                 <ul>
@@ -24,7 +35,7 @@
                 </ul>
             </nav>
         </header>
-    <main class="gal-grid">
+    <main class="gal-main" id="main-content">
         <h1 class="gallery-intro">
             A key piece of the Pomodoro method is to take a break every 25 minutes...and you really should take those breaks! It is recommended
                 that you stop when your timer goes off, even if you are in a flow state in your work, to prevent burnout. This can mean
@@ -36,41 +47,44 @@
 
 
         <div class="gallery-grid">
-            <div id="img1">
+            <div id="img1" class="flex-gal">
                 <figure><img class="gal-img" src="./images/atlantic_puffin.jpeg" alt="The atlantic puffin, a small flightless bird, standing on a rock with its wings stretched behind it." >
                 <figcaption>Atlantic puffin</figcaption>
                 </figure></div>
-            <div id="img2"><figure><img class="gal-img" src="./images/brownheaded_cowbird.jpeg" alt="The brown-headed cowbird, a small black bird with a brown head, sitting on a branch." >
+            <div id="img2" class="flex-gal"><figure><img class="gal-img" src="./images/brownheaded_cowbird.jpeg" alt="The brown-headed cowbird, a small black bird with a brown head, sitting on a branch." >
                 <figcaption>Brown-headed cowbird</figcaption>
                 </figure></div>
-            <div id="img3"><figure><img class="gal-img" src="./images/california_condor.jpeg" alt="The california condor, a large black bird with a naked head, with an ID tag on its wing." >
+            <div id="img3" class="flex-gal"><figure><img class="gal-img" src="./images/california_condor.jpeg" alt="The california condor, a large black bird with a naked head, with an ID tag on its wing." >
                 <figcaption>California condor</figcaption>
                 </figure></div>
-            <div id="img4"><figure><img class="gal-img" src="./images/cedar_waxwing.jpeg" alt="The cedar waxwing, a sleek bird with yellow tips on its tail, with a berry in its mouth." >
+            <div id="img4" class="flex-gal"><figure><img class="gal-img" src="./images/cedar_waxwing.jpeg" alt="The cedar waxwing, a sleek bird with yellow tips on its tail, with a berry in its mouth." >
                 <figcaption>Cedar waxwing</figcaption>
                 </figure></div>
-            <div id="img5"><figure><img class="gal-img" src="./images/glossy_ibis.jpeg" alt="The glossy ibis, a red and green bird, standing in the grass.">
+            <div id="img5" class="flex-gal"><figure><img class="gal-img" src="./images/glossy_ibis.jpeg" alt="The glossy ibis, a red and green bird, standing in the grass.">
                 <figcaption>Glossy ibis</figcaption>
                 </figure></div>
-            <div id="img6"><figure><img class="gal-img" src="./images/gullbilled_tern.jpeg" alt="The gull-billed tern, a white seabird with a black bill, flying in the sky." >
+            <div id="img6" class="flex-gal"><figure><img class="gal-img" src="./images/gullbilled_tern.jpeg" alt="The gull-billed tern, a white seabird with a black bill, flying in the sky." >
                 <figcaption>Gull-billed tern</figcaption>
                 </figure></div>
-            <div id="img7"><figure><img class="gal-img" src="./images/northern_flicker.jpeg" alt="The northern flicker, with black spots and a red spot on its nape, sitting on a tree limb.">
+            <div id="img7" class="flex-gal"><figure><img class="gal-img" src="./images/northern_flicker.jpeg" alt="The northern flicker, with black spots and a red spot on its nape, sitting on a tree limb.">
                 <figcaption>Northern flicker</figcaption>
                 </figure></div>
-            <div id="img8"><figure><img class="gal-img" src="./images/wood_duck.jpeg" alt="The wood duck, a duck with a colorful head, standing near shallow water." >
+            <div id="img8" class="flex-gal"><figure><img class="gal-img" src="./images/wood_duck.jpeg" alt="The wood duck, a duck with a colorful head, standing near shallow water." >
                 <figcaption>Wood duck</figcaption>
                 </figure></div>
-            <div id="img9"><figure><img class="gal-img" src="./images/prothonotary_warbler.jpeg" alt="The prothonotary warbler, a small yellow bird with dark wings, perched on a branch.">
+            <div id="img9" class="flex-gal"><figure><img class="gal-img" src="./images/prothonotary_warbler.jpeg" alt="The prothonotary warbler, a small yellow bird with dark wings, perched on a branch.">
                 <figcaption>Prothonotary warbler</figcaption>
                 </figure></div>
         </div>
         <h1 class="citation">
             All images taken from and belonging to allaboutbirds.org.
         </h1>
-
+        <script src="./javascript/gallery.js"></script>
     </main>
-    <footer>
+    <div class="hidden">
+        <audio id="gal-sound" src="./audio/gallery-sound.m4a"></audio>
+    </div>
+    <footer id="gal-foot">
         <p class="footer-text">Created by Summer Mengarelli, 2022.<p>
     </footer>
     </body>
